@@ -1,0 +1,17 @@
+# Lisp implementation outputs
+*.fasl
+*.fas
+*.x86f
+*.dx64fsl
+*.lx64fsl
+
+# Quicklisp local stuff (optional)
+quicklisp/
+
+# Editor / OS temp files
+*~
+.#*
+.DS_Store
+
+# Logs
+logs/
