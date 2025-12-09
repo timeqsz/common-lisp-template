@@ -1,9 +1,9 @@
 ;;; src/core.lisp
 
-(uiop:define-package :small-inventory-prototype/core
+(uiop:define-package :common-lisp-template/core
   (:use :cl)
   ;;  util/logging used for logging messages
-  (:import-from :small-inventory-prototype/util/logging
+  (:import-from :common-lisp-template/util/logging
                 #:log-info
                 #:log-warn)
   (:export
@@ -11,21 +11,21 @@
    #:stop
    #:do-something))
 
-(in-package :small-inventory-prototype/core)
+(in-package :common-lisp-template/core)
 
 (defparameter *running* nil
-  "Whether small-inventory-prototype is running.")
+  "Whether common-lisp-template is running.")
 
 (defun start ()
   (unless *running*
     (setf *running* t)
-    (log-info "small-inventory-prototype started."))
+    (log-info "common-lisp-template started."))
   *running*)
 
 (defun stop ()
   (when *running*
     (setf *running* nil)
-    (log-info "small-inventory-prototype stopped."))
+    (log-info "common-lisp-template stopped."))
   *running*)
 
 (defun do-something (&key (name "world"))

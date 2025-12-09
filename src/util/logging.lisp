@@ -1,13 +1,13 @@
 ;;; src/util/logging.lisp
 
-(uiop:define-package :small-inventory-prototype/util/logging
+(uiop:define-package :common-lisp-template/util/logging
   (:use :cl)
   (:export
    #:log-info
    #:log-warn
    #:log-error))
 
-(in-package :small-inventory-prototype/util/logging)
+(in-package :common-lisp-template/util/logging)
 
 (defun %timestamp ()
   (multiple-value-bind (sec min hour day month year)

@@ -1,24 +1,24 @@
 ;;; src/main.lisp
 
-(uiop:define-package :small-inventory-prototype/main
+(uiop:define-package :common-lisp-template/main
   (:use :cl)
-  (:import-from :small-inventory-prototype/core
+  (:import-from :common-lisp-template/core
                 #:start
                 #:stop
                 #:do-something)
   (:export
    #:main))
 
-(in-package :small-inventory-prototype/main)
+(in-package :common-lisp-template/main)
 
 (defun main (&rest argv)
-  "Entry point for small-inventory-prototype demo.
+  "Entry point for common-lisp-template demo.
    Can be called directly in the REPL or made into an executable wrapper."
   (declare (ignore argv))
   (start)
   (unwind-protect
        (progn
-         (format t "Running small-inventory-prototype demo...~%")
+         (format t "Running common-lisp-template demo...~%")
          (format t "~{~A~^ ~}~%" argv))
          (do-something :name "world"))
     (stop))

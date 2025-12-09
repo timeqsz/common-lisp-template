@@ -1,6 +1,6 @@
 ;;; template.asd --- A Common Lisp project template using package-inferred-system
 
-(asdf:defsystem "small-inventory-prototype"
+(asdf:defsystem "common-lisp-template"
   :description "A generic Common Lisp project template using package-inferred-system."
   :author "Sylvan Lv"
   :license "MIT"
@@ -14,4 +14,4 @@
   :pathname "src"
 
   ;; entry point
-  :depends-on ("small-inventory-prototype/main"))
+  :depends-on ("common-lisp-template/main"))
